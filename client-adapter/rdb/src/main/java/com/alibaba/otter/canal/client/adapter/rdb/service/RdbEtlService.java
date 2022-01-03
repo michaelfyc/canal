@@ -107,7 +107,11 @@ public class RdbEtlService extends AbstractEtlService {
                             // 删除数据
                             Map<String, Object> pkVal = new LinkedHashMap<>();
                             StringBuilder deleteSql = new StringBuilder(
-                                "DELETE FROM " + SyncUtil.getDbTableName(dbMapping) + " WHERE ");
+                                    "DELETE FROM " + SyncUtil.getDbTableName(dbMapping) + " WHERE ");
+                            if (config.isClickhouse()) {
+                                deleteSql = new StringBuilder(
+                                        "ALTER TABLE " + SyncUtil.getDbTableName(dbMapping) + " DELETE WHERE ");
+                            }
                             appendCondition(dbMapping, deleteSql, pkVal, rs);
                             try (PreparedStatement pstmt2 = connTarget.prepareStatement(deleteSql.toString())) {
                                 int k = 1;
