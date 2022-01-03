@@ -189,7 +189,11 @@
                 <artifactId>mssql-jdbc</artifactId>
                 <version>7.0.0.jre8</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.clickhouse</groupId>
+                <artifactId>clickhouse-jdbc</artifactId>
+                <version>0.3.2</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.hbase</groupId>
                 <artifactId>hbase-shaded-client</artifactId>
