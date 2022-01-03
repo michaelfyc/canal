@@ -60,10 +60,10 @@ canal.conf:
 #      - name: rdb
 #        key: mysql1
 #        properties:
-#          jdbc.driverClassName: com.mysql.jdbc.Driver
-#          jdbc.url: jdbc:mysql://127.0.0.1:3306/mytest2?useUnicode=true
-#          jdbc.username: root
-#          jdbc.password: 121212
+#          jdbc.driverClassName: com.clickhouse.jdbc.ClickHouseDriver
+#          jdbc.url: jdbc:clickhouse://127.0.0.1:8123/mytest2?useUnicode=true
+#          jdbc.username: default
+#          jdbc.password:
 #      - name: rdb
 #        key: oracle1
 #        properties:

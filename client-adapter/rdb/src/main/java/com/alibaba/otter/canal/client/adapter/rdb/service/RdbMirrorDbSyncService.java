@@ -130,6 +130,7 @@ public class RdbMirrorDbSyncService {
             mappingConfig.setGroupId(baseConfigMap.getGroupId());
             mappingConfig.setOuterAdapterKey(baseConfigMap.getOuterAdapterKey());
             mappingConfig.setConcurrent(baseConfigMap.getConcurrent());
+            mappingConfig.setClickhouse(baseConfigMap.isClickhouse());
             MappingConfig.DbMapping dbMapping = new MappingConfig.DbMapping();
             mappingConfig.setDbMapping(dbMapping);
             dbMapping.setDatabase(dml.getDatabase());
