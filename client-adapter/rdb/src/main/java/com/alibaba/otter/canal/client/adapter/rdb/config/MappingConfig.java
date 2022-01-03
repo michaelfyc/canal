@@ -23,6 +23,16 @@ public class MappingConfig implements AdapterConfig {
 
     private String    outerAdapterKey;    // 对应适配器的key
 
+    private Boolean  clickhouse = false; // 判断是不是 Clickhouse
+
+    public Boolean isClickhouse() {
+        return clickhouse;
+    }
+
+    public void setClickhouse(Boolean clickhouse) {
+        this.clickhouse = clickhouse;
+    }
+
     private boolean   concurrent = false; // 是否并行同步
 
     private DbMapping dbMapping;          // db映射配置
